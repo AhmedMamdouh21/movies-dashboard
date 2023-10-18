@@ -206,7 +206,7 @@
 .bootstrap-select > .dropdown-toggle.bs-placeholder, .bootstrap-select > .dropdown-toggle.bs-placeholder:active, .bootstrap-select > .dropdown-toggle.bs-placeholder:focus, .bootstrap-select > .dropdown-toggle.bs-placeholder:hover {
   background-color: transparent;
   color: #262626;
-  border-color: #216CFC;
+  border-color: #8FAED2;
   border-radius: 7px;
 }
 
@@ -216,12 +216,12 @@
 
 .bootstrap-select > .dropdown-toggle {
   background-color: #FFFFFF;
-  border-color: #216CFC;
+  border-color: #8FAED2;
 }
 
 .bootstrap-select .dropdown-menu {
   color: #262626;
-  border-color: #216CFC;
+  border-color: #8FAED2;
 }
 
 .bootstrap-select .dropdown-menu .dropdown-item:hover {

@@ -279,7 +279,7 @@
 .bootstrap-select>.dropdown-toggle.bs-placeholder, .bootstrap-select>.dropdown-toggle.bs-placeholder:active, .bootstrap-select>.dropdown-toggle.bs-placeholder:focus, .bootstrap-select>.dropdown-toggle.bs-placeholder:hover {
     background-color: transparent;
     color: $black_26;
-    border-color: $blue;
+    border-color: $blueGray;
     border-radius: 7px;
 }
 
@@ -288,7 +288,7 @@
 }
 .bootstrap-select>.dropdown-toggle {
     background-color: $white;
-    border-color: $blue;
+    border-color: $blueGray;
 }
 .bootstrap-select {
     * {
@@ -296,7 +296,7 @@
     }
     .dropdown-menu {
         color: $black_26;
-        border-color: $blue;
+        border-color: $blueGray;
         .dropdown-item {
                 &:hover {
                     background-color: $offWhite;
