@@ -1,0 +1,91 @@
+/*** Buttons ***/
+.btn-main {
+    @extend .text-body;
+    @extend .font-bold;
+    border: none;
+    border-radius: 7px;
+    @include breakpointsMinWidth(mobile) {
+        padding: 9px 35px;
+    }
+    @include breakpointsMaxWidth(mobile) {
+        padding: 8px 25px;
+        border-radius: 7px;
+    }
+
+    &.blue {
+        background-color: $blue;
+        color: $white;
+    }
+
+    &.blueLight {
+        background-color: rgba($color: $blue, $alpha: 0.1);
+        color: $blue;
+    }
+
+    &.red {
+        background-color: rgba($color: $red, $alpha: 0.1);
+        color: $red;
+    }
+}
+
+
+
+// Actions
+
+.actions {
+    .dropdown {
+        position: static;
+        .dropdown-toggle {
+            background: none;
+            border: none;
+            transition: $transitionFast;
+            &.show  {
+                transform: rotate(-90deg);
+            }
+            &::after {
+                display: none;
+            }
+        }
+        .dropdown-menu {
+            border: none;
+            border-radius: 7px;
+            box-shadow: 0px 8px 24px 0px rgba($color: $blueGray, $alpha: 0.1);
+            .dropdown-item {
+                transition: $transitionFast;
+                @extend .font-bold;
+                margin: 0.25rem 0;
+                @extend .text-body;
+                .icon {
+                    @include breakpointsMaxWidth(mobile) {
+                        max-width: 15px;
+                    }
+                }
+                &.delete-movie {
+                    color: $red;
+                    .icon {
+                        .strok {
+                            stroke: $red;
+                        }
+                    }
+                    &:hover {
+                        background-color: rgba($color: $red
+                        , $alpha: 0.06);
+                    }
+                }
+
+                &.edit-movie {
+                    color: $blue;
+                    .icon {
+                        .strok {
+                            stroke: $blue;
+                        }
+                    }
+                    &:hover {
+                        background-color: rgba($color: $blue
+                        , $alpha: 0.06);
+                    }
+                }
+            }
+        }
+       }
+}

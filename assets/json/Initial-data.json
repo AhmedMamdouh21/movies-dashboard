@@ -1,0 +1,51 @@
+{
+  "categories": [
+    {
+      "id": 80877,
+      "name": "Family",
+      "movies": [
+        {
+          "id": 655880,
+          "name": "Home Alone",
+          "description": "An eight-year-old troublemaker, mistakenly left home alone, must defend his home against a pair of burglars on Christmas eve."
+        },
+        {
+          "id": 132548,
+          "name": "Elemental",
+          "description": "Follows Ember and Wade, in a city where fire-, water-, earth- and air-residents live together."
+        },
+        {
+          "id": 655881,
+          "name": "Casper",
+          "description": "An afterlife therapist and his daughter meet a friendly young ghost when they move into a crumbling mansion in order to rid the premises of wicked spirits."
+        },
+        {
+          "id": 655882,
+          "name": "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe",
+          "description": "Four kids travel through a wardrobe to the land of Narnia and learn of their destiny to free it with the guidance of a mystical lion."
+        }
+      ]
+    },
+    {
+      "id": 21281,
+      "name": "Animation",
+      "movies": [
+        {
+          "id": 132548,
+          "name": "Elemental",
+          "description": "Follows Ember and Wade, in a city where fire-, water-, earth- and air-residents live together."
+        },
+        {
+          "id": 132570,
+          "name": "Moana",
+          "description": "In Ancient Polynesia, when a terrible curse incurred by the Demigod Maui reaches Moana's island, she answers the Ocean's call to seek out the Demigod to set things right."
+        },
+        {
+          "id": 132574,
+          "name": "Inside Out",
+          "description": "After young Riley is uprooted from her Midwest life and moved to San Francisco, her emotions - Joy, Fear, Anger, Disgust, and Sadness - conflict on how best to navigate a new city, house, and school."
+        }
+      ]
+    }
+  ]
+}

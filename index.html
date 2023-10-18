@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="izam" />
+    <meta property="og:title" content="Movies Dashboard" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:image:alt" content="" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon.png" />
+    <title>Movies Dashboard</title>
+    <link rel="stylesheet" href="assets/style/style.css" />
+</head>
+
+<body>
+    <!-- Start Sidebar -->
+    <div class="sidebar d-flex flex-column justify-content-between">
+        <div>
+            <div class="profile text-center">
+                <div class="profile-img mx-auto">
+                    <img class="img-fit" src="assets/img/profile.png" alt="profile">
+                </div>
+                <h3 class="text-body font-bold my-3">
+                    Michael Atkisons
+                </h3>
+                <p class="mb-0 font-bold text-blue">
+                    My Profile
+                </p>
+            </div>
+            <div class="list">
+                <h5 class="title-menu text-body font-bold mb-3">MENU</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link d-flex align-items-center" aria-current="page">
+                            <svg class="icon" width="20" height="20" viewBox="0 0 23.449 23.477">
+                                <g id="at-sign-2" transform="translate(0.752 0.765)">
+                                    <circle class="strok" id="Ellipse_3" data-name="Ellipse 3" cx="5.5" cy="5.5" r="5.5"
+                                        transform="translate(5.41 5.368)" fill="none" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="1.5" />
+                                    <path class="strok" id="Path_11" data-name="Path 11"
+                                        d="M15.863,21.534a10.974,10.974,0,1,1,6.584-10.061v2.195a2.926,2.926,0,1,1-5.853,0V6.352"
+                                        transform="translate(-0.5 -0.502)" fill="none" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="1.5" />
+                                </g>
+                            </svg>
+                            Inbox
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link d-flex align-items-center">
+                            <svg class="icon" width="20" height="20" viewBox="0 0 23.447 23.447">
+                                <g id="send" transform="translate(0.75 0.75)">
+                                    <path class="strok" id="Path_2" data-name="Path 2"
+                                        d="M6.358,13.673l11.7,8.775L22.447.5.5,9.279l2.929,2.2"
+                                        transform="translate(-0.5 -0.5)" fill="none" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="1.5" />
+                                    <path class="strok" id="Path_3" data-name="Path 3"
+                                        d="M9.08,14.325,4.5,19.668l.006-8.775L11.084,6.5"
+                                        transform="translate(1.353 2.279)" fill="none" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="1.5" />
+                                </g>
+                            </svg>
+                            Sent
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link d-flex align-items-center">
+                            <svg class="icon" width="20" height="20" viewBox="0 0 20.5 20.459">
+                                <g id="i-edit" transform="translate(0.782 0.75)">
+                                    <line class="strok" id="Line_1" data-name="Line 1" x2="19"
+                                        transform="translate(-0.032 18.959)" fill="none" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="1.5" />
+                                    <path class="strok" id="Path_4" data-name="Path 4"
+                                        d="M13.629.5l3.465,3.465L6.7,14.361,1.5,16.094l1.733-5.2Z"
+                                        transform="translate(0.229 -0.5)" fill="none" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="1.5" />
+                                </g>
+                            </svg>
+                            Drafts
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link d-flex align-items-center">
+                            <svg class="icon" width="20" height="20" viewBox="0 0 20.5 20.56">
+                                <g id="bin" transform="translate(0.782 0.75)">
+                                    <line class="strok" id="Line_2" data-name="Line 2" x2="19"
+                                        transform="translate(-0.032 3.964)" fill="none" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="1.5" />
+                                    <path class="strok" id="Path_5" data-name="Path 5" d="M4.5,3.965V.5H9.7V3.965"
+                                        transform="translate(2.427 -0.5)" fill="none" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="1.5" />
+                                    <path class="strok" id="Path_6" data-name="Path 6"
+                                        d="M14.629,4.5V14.9A1.733,1.733,0,0,1,12.9,16.629H4.233A1.733,1.733,0,0,1,2.5,14.9V4.5"
+                                        transform="translate(0.961 2.431)" fill="none" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="1.5" />
+                                </g>
+                            </svg>
+
+                            Deleted
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link d-flex align-items-center">
+
+                            <svg class="icon" width="20" height="20" viewBox="0 0 20.521 19.591">
+                                <g id="star" transform="translate(0.75 -6.25)">
+                                    <path class="strok" id="Path_7" data-name="Path 7"
+                                        d="M10.011.769l2.94,5.955,6.571.955-4.755,4.634,1.122,6.547-5.877-3.09L4.133,18.86l1.122-6.547L.5,7.679l6.571-.955Z"
+                                        transform="translate(-0.5 6.231)" fill="none" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="1.5" />
+                                </g>
+                            </svg>
+
+                            Favourite
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link d-flex align-items-center">
+                            <svg class="icon" width="20" height="20" viewBox="0 0 20.484 20.484">
+                                <g id="a-chart" transform="translate(0.751 0.75)">
+                                    <path class="strok" id="Path_8" data-name="Path 8"
+                                        d="M7.419,2.55a7.763,7.763,0,1,0,8.563,8.563"
+                                        transform="translate(-0.501 0.953)" fill="none" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="1.5" />
+                                    <path class="strok" id="Path_9" data-name="Path 9"
+                                        d="M6.5.525V9.131h8.606A9.514,9.514,0,0,0,6.5.525Z"
+                                        transform="translate(3.878 -0.525)" fill="none" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="1.5" />
+                                </g>
+                            </svg>
+
+                            Analytics
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link d-flex align-items-center active">
+                            <svg class="icon" width="20" height="20" viewBox="0 0 23.447 23.447">
+                                <g id="privacy-settings" transform="translate(0.75 -1.25)">
+                                    <ellipse class="strok" id="Ellipse_2" data-name="Ellipse 2" cx="2.195" cy="2.195"
+                                        rx="2.195" ry="2.195" transform="translate(8.779 8.047)" fill="none"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+                                    <path class="strok" id="Path_10" data-name="Path 10"
+                                        d="M22.447,12.937V10.011l-3.185-.531a7.993,7.993,0,0,0-.878-2.1l1.877-2.634L18.2,2.68,15.571,4.556a7.993,7.993,0,0,0-2.1-.871L12.937.5H10.011L9.479,3.685a7.993,7.993,0,0,0-2.1.871L4.743,2.68,2.68,4.743,4.556,7.377a7.993,7.993,0,0,0-.871,2.1L.5,10.011v2.926l3.185.531a7.993,7.993,0,0,0,.871,2.1L2.68,18.2l2.063,2.063,2.634-1.876a7.993,7.993,0,0,0,2.1.878l.531,3.178h2.926l.531-3.185a7.993,7.993,0,0,0,2.1-.878L18.2,20.261,20.267,18.2l-1.876-2.634a7.993,7.993,0,0,0,.878-2.1Z"
+                                        transform="translate(-0.5 1.5)" fill="none" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="1.5" />
+                                    <line class="strok" id="Line_3" data-name="Line 3" y2="2.926"
+                                        transform="translate(10.974 14.437)" fill="none" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="1.5" />
+                                </g>
+                            </svg>
+                            Settings
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="action text-center">
+            <div>
+                <button class="btn-main blue my-2">
+                    Upgrade Plan
+                </button>
+            </div>
+            <div>
+                <button class="btn-main blueLight my-2">
+                    Contact Support
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Start Toggle SideBar -->
+    <button type="button" class="toggle-sidebar">
+        <span></span>
+    </button>
+    <!-- End Toggle SideBar -->
+    <!-- End Sidebar -->
+    <main>
+        <div class="content">
+            <div class="header">
+                <h1 class="page-title">
+                    Movies
+                </h1>
+            </div>
+            <!-- Start Add Category -->
+            <div class="add-category">
+                <h2 class="title-lg mb-4">
+                    Add Category
+                </h2>
+                <form class="add-box d-flex" id="formAddCategory">
+                    <input id="category" class="form-control" type="text" name="category" required>
+                    <button type="submit" class="btn-main blue btn-add-category">
+                        Add
+                    </button>
+                </form>
+            </div>
+            <!-- End Add Category -->
+
+            <!-- Start List Movies -->
+            <template id="list-item-template">
+                <div class="list-movies mb-4">
+                    <h2 class="title title-lg mb-4">
+                    </h2>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Movie Name</th>
+                                    <th>Movie Tags</th>
+                                    <th>Movie Description</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbody">
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="text-end mt-3">
+                        <button type="button" class="btn-main blue add-movie" data-bs-toggle="modal"
+                            data-bs-target="#modalFormMovie">
+                            Add Movie
+                        </button>
+                    </div>
+
+
+                </div>
+            </template>
+            <!-- Start Table Data -->
+            <template id="table-template">
+                <tr>
+                    <td>
+                        <h6 class="movie-name font-bold text-body mb-0"></h6>
+                    </td>
+                    <td>
+                        <div class="tags d-flex align-items-center flex-wrap">
+                        </div>
+                    </td>
+                    <td>
+                        <p class="movie-description">
+                        </p>
+                    </td>
+                    <td class="actions">
+                        <div class="dropdown text-end">
+                            <button class="dropdown-toggle px-0" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <svg width="20" height="20" viewBox="0 0 24.828 24.828">
+                                    <g id="dots-to-close-2" transform="translate(-3.586 -3.586)">
+                                        <g id="Group_8" data-name="Group 8" transform="translate(32) rotate(90)">
+                                            <g id="Group_5" data-name="Group 5">
+                                                <circle id="Ellipse_4" data-name="Ellipse 4" cx="1" cy="1" r="1"
+                                                    transform="translate(5 15)" fill="#646a85" />
+                                                <circle id="Ellipse_5" data-name="Ellipse 5" cx="1" cy="1" r="1"
+                                                    transform="translate(5 15)" fill="none" stroke="#646a85"
+                                                    stroke-linecap="square" stroke-width="2" />
+                                            </g>
+                                            <g id="Group_6" data-name="Group 6">
+                                                <circle id="Ellipse_6" data-name="Ellipse 6" cx="1" cy="1" r="1"
+                                                    transform="translate(25 15)" fill="#646a85" />
+                                                <circle id="Ellipse_7" data-name="Ellipse 7" cx="1" cy="1" r="1"
+                                                    transform="translate(25 15)" fill="none" stroke="#646a85"
+                                                    stroke-linecap="square" stroke-width="2" />
+                                            </g>
+                                            <g id="Group_7" data-name="Group 7">
+                                                <circle id="Ellipse_8" data-name="Ellipse 8" cx="1" cy="1" r="1"
+                                                    transform="translate(15 15)" fill="#646a85" />
+                                                <circle id="Ellipse_9" data-name="Ellipse 9" cx="1" cy="1" r="1"
+                                                    transform="translate(15 15)" fill="none" stroke="#646a85"
+                                                    stroke-linecap="square" stroke-width="2" />
+                                            </g>
+                                            <path id="Path_12" data-name="Path 12" d="M16,16,27,5" fill="none"
+                                                stroke="#646a85" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-dashoffset="15.56" stroke-width="2"
+                                                stroke-dasharray="15.56 15.56" opacity="0" />
+                                            <path id="Path_13" data-name="Path 13" d="M5,27,16,16" fill="none"
+                                                stroke="#646a85" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-dashoffset="15.56" stroke-width="2"
+                                                stroke-dasharray="15.56 15.56" opacity="0" />
+                                            <path id="Path_14" data-name="Path 14" d="M16,16,27,27" fill="none"
+                                                stroke="#646a85" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-dashoffset="15.56" stroke-width="2"
+                                                stroke-dasharray="15.56 15.56" opacity="0" />
+                                            <path id="Path_15" data-name="Path 15" d="M5,5,16,16" fill="none"
+                                                stroke="#646a85" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-dashoffset="15.56" stroke-width="2"
+                                                stroke-dasharray="15.56 15.56" opacity="0" />
+                                        </g>
+                                    </g>
+                                </svg>
+
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <button type="button"
+                                        class="dropdown-item d-flex align-items-center justify-content-between edit-movie"
+                                        data-bs-toggle="modal" data-bs-target="#modalFormMovie">
+                                        Edit
+                                        <svg class="icon" width="20" height="20" viewBox="0 0 20.5 20.459">
+                                            <g id="i-edit" transform="translate(0.782 0.75)">
+                                                <line class="strok" id="Line_1" data-name="Line 1" x2="19"
+                                                    transform="translate(-0.032 18.959)" fill="none"
+                                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+                                                <path class="strok" id="Path_4" data-name="Path 4"
+                                                    d="M13.629.5l3.465,3.465L6.7,14.361,1.5,16.094l1.733-5.2Z"
+                                                    transform="translate(0.229 -0.5)" fill="none" stroke-linecap="round"
+                                                    stroke-linejoin="round" stroke-width="1.5" />
+                                            </g>
+                                        </svg>
+                                    </button>
+                                    <button
+                                        class="dropdown-item d-flex align-items-center justify-content-between delete-movie">
+                                        Delete
+                                        <svg class="icon" width="18" height="18" viewBox="0 0 20.5 20.56">
+                                            <g id="bin" transform="translate(0.782 0.75)">
+                                                <line class="strok" id="Line_2" data-name="Line 2" x2="19"
+                                                    transform="translate(-0.032 3.964)" fill="none"
+                                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+                                                <path class="strok" id="Path_5" data-name="Path 5"
+                                                    d="M4.5,3.965V.5H9.7V3.965" transform="translate(2.427 -0.5)"
+                                                    fill="none" stroke-linecap="round" stroke-linejoin="round"
+                                                    stroke-width="1.5" />
+                                                <path class="strok" id="Path_6" data-name="Path 6"
+                                                    d="M14.629,4.5V14.9A1.733,1.733,0,0,1,12.9,16.629H4.233A1.733,1.733,0,0,1,2.5,14.9V4.5"
+                                                    transform="translate(0.961 2.431)" fill="none"
+                                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+                                            </g>
+                                        </svg>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            </template>
+            <div class="list-data">
+            </div>
+            <!-- End Table Data -->
+
+            <!-- End List Movies -->
+
+            <!-- Start Modal form Add & Update Movie -->
+            <div class="modal modal-formMovie fade" id="modalFormMovie" tabindex="-1"
+                aria-labelledby="modalFormMovieLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title title-lg" id="titleModalFormMovie"></h3>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="formMovie">
+                                <div class="mb-3">
+                                    <label for="" class="form-label d-block font-bold">Name*</label>
+                                    <input id="movieName" class="form-control" type="text" name="movieName" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="" class="form-label d-block font-bold">Movie Tags</label>
+                                    <select class="selectpicker" multiple data-live-search="true">
+                                        <option> Highly Rated</option>
+                                        <option>Box Office</option>
+                                        <option>Old but Gold</option>
+                                        <option>Superheroes</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="" class="form-label d-block font-bold">Description*</label>
+                                    <textarea id="movieDescription" class="form-control" name="movieDescription"
+                                        required></textarea>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mt-4">
+                                    <button type="button" class="btn-main blueLight"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <button id="btn-submit" type="submit" class="btn-main blue "></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Modal form Add & Update Movie -->
+
+        </div>
+    </main>
+
+    <!-- Start Loader Data -->
+    <div class="loader-data">
+        <span class="loader"></span>
+    </div>
+    <!-- End Loader Data -->
+
+    <!-- Start Script -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.validate.min.js"></script>
+    <script src="assets/js/bootstrap-select.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <!-- End Script -->
+</body>
+
+</html>

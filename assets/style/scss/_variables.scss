@@ -1,0 +1,28 @@
+/*** Color Pallete ***/
+$black:#000000;
+$black_27:#272727;
+$black_26:#262626;
+$white:#FFFFFF;
+$offWhite:#FAFBFC;
+$blue:#216CFC;
+$blueGray:#8FAED2;
+$blueLight:#F0F7FF;
+$grayDark: #808080;
+$gray:#A9A59D;
+$grayLight:#a8abb7;
+$grayExtraLight:#D4D6DD;
+$red:#FF0000;
+
+
+/*** Transition ***/
+$transitionFast: all 0.3s ease-in-out;
+$transitionSlow: all 0.6s ease-in-out;
+
+
+
+/*** Font Family ***/
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
+$fontFamily: 'Lato', sans-serif;
+
+

@@ -1,0 +1,284 @@
+@import url('./bootstrap.min.css');
+@import url('./bootstrap-select.min.css');
+@import './scss/variables';
+@import './scss/custom';
+@import './scss/buttons';
+
+
+body {
+    font-family: $fontFamily;
+    background-color: $offWhite;
+    @extend .text-body;
+}
+
+/*** SideBar ***/
+.sidebar {
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    height: 100vh;
+    background-color: $white;
+    padding: 2rem;
+    overflow-y: auto;
+    z-index: 99;
+    transition: $transitionFast;
+    @include breakpointsMinWidth(medium) {
+        left: 0;
+        width: 260px;
+    }
+
+    @include breakpointsMaxWidth(medium) {
+        left: -100%;
+        width: 100%;
+    }
+    @extend .custom-scroll;
+    
+    
+    &.show {
+        @include breakpointsMaxWidth(medium) {
+            left: 0%;
+        } 
+    }
+
+    .profile {
+        border-bottom: 1px solid rgba($color: $grayLight, $alpha: 0.6);
+        padding-bottom: 2rem;
+        .profile-img {
+            width: 82px;
+            height: 82px;
+            min-width: 82px;
+            min-height: 82px;
+            margin: 0 auto;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+    }
+    .list {
+        margin: 2rem 0;
+        .title-menu {
+            letter-spacing: 3.52px;
+            color: $black_26;
+        }
+        .nav {
+            .nav-item {
+                display: inline-flex;
+                margin: 0.35rem 0;
+                .nav-link {
+                    padding: 0;
+                    padding: 0.25rem 0;
+                    color: $black_27;
+                    transition: $transitionFast;
+                    @extend .font-bold;
+                    position: relative;
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        left: -2rem;
+                        top: 0;
+                        height: 100%;
+                        width: 0px;
+                        background-color: $blue;
+                        transition: $transitionFast;
+                        pointer-events: none;
+                    }
+                    .icon {
+                        margin-right: 0.75rem;
+                        transition: $transitionFast;
+                        .strok {
+                            stroke: $grayLight;
+                        }
+                    }
+
+                    &:hover {
+                        .strok {
+                            stroke: $blue;
+                        }
+                    }
+
+                    &.active {
+                        color: $blue;
+                        &::before {
+                            width: 4px;
+                        }
+                        .icon {
+                            .strok {
+                                stroke: $blue;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    .action {
+       button {
+        @include breakpointsMinWidth(medium) {
+            width: 100%;
+         }
+         @include breakpointsMaxWidth(medium) {
+             min-width: 200px;
+         } 
+       }
+    }
+}
+
+/*** Main ***/
+main {
+    
+    @include breakpointsMinWidth(medium) {
+        margin-left: 260px;
+        padding: 2rem;
+    }
+
+    @include breakpointsMaxWidth(medium) {
+        padding: 1rem;
+    }
+    .content {
+        background-color: $white;
+        @include breakpointsMinWidth(medium) {
+            padding: 2rem 0rem;
+        }
+    
+        @include breakpointsMaxWidth(medium) {
+            padding: 1rem 0rem;
+        }
+        .header {
+            border-bottom: 1px solid rgba($color: $grayExtraLight, $alpha: 0.6);
+
+            @include breakpointsMinWidth(medium) {
+                padding: 0 3.5rem 2rem 3.5rem;
+
+            }
+        
+            @include breakpointsMaxWidth(medium) {
+                padding: 0 1.5rem 1rem 1.5rem;
+
+            }
+        }
+        .add-category {
+            background-color: $blueLight;
+            border-radius: 15px;
+            position: relative;
+            @include breakpointsMinWidth(medium) {
+                padding: 2rem;
+                margin: 1.5rem;
+            }
+        
+            @include breakpointsMaxWidth(medium) {
+                padding: 1.5rem 1rem 2rem;
+                margin: 1rem;
+                
+            }
+            .add-box {
+                .form-control {
+                    border-radius: 5px 0px 0px 5px;
+                }
+                .btn-add-category {
+                    border-radius: 0px 5px 5px 0px;
+                    @include breakpointsMinWidth(medium) {
+                        min-width: 150px
+                    }
+                }
+                label {
+                    &.invalid {
+                        @extend .font-bold;
+                        color: $red;
+                        position: absolute;
+                        bottom: 0.5rem;
+                        @include breakpointsMinWidth(medium) {
+                            font-size: 14px;
+                            left: 2.25rem;
+                        }
+                    
+                        @include breakpointsMaxWidth(medium) {
+                            font-size: 12px;
+                            left: 1.25rem;
+                        }
+                    }
+                }
+            }
+        }
+        // List Movies
+        .list-movies {
+            @include breakpointsMinWidth(medium) {
+                padding: 0 3.5rem;
+            }
+        
+            @include breakpointsMaxWidth(medium) {
+                padding: 0 1.5rem;
+            }
+            .table-responsive {
+                overflow-y: auto;
+                @include breakpointsMinWidth(medium) {
+                    max-height: 80vh;
+                }
+            
+                @include breakpointsMaxWidth(medium) {
+                    max-height: 60vh;
+                }
+                @extend .custom-scroll;
+                .table {
+                    thead {
+                        position: sticky;
+                        top: 0;
+                        z-index: 9;
+                        tr {
+                            th {
+                                border-top: 1px solid;
+                                border-color: rgba($color: $grayExtraLight, $alpha: 0.6);
+                                color: $grayDark;
+                                @extend .font-bold;
+                            }
+                        }
+                    }
+                    tbody {
+                        tr {
+                            td {
+                                border-color: rgba($color: $grayExtraLight, $alpha: 0.6);
+                                color: $black_27;
+                                padding: 1rem 0.5rem;
+                                &:not(.actions) {
+                                    @include breakpointsMinWidth(medium) {
+                                        min-width: 200px;
+                                    }
+                                
+                                    @include breakpointsMaxWidth(medium) {
+                                        min-width: 120px;
+                                    }
+                                }
+                                @extend .font-bold;
+                                .tags {
+                                    .tag {
+                                        background-color: $gray;
+                                        border-radius: 7px;
+                                        color: $white;
+                                        width: max-content;
+                                        margin-right: 0.5rem;
+                                        margin-bottom: 0.5rem;
+                                        @include breakpointsMinWidth(medium) {
+                                            font-size: 14px;
+                                            padding: 4px 15px;
+                                        }
+                                    
+                                        @include breakpointsMaxWidth(medium) {
+                                            font-size: 10px;
+                                            padding: 4px 10px;
+                                        }
+                                    }
+                                }
+    
+                                .movie-description {
+                                    margin-bottom: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+

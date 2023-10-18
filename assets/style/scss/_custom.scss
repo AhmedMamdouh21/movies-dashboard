@@ -1,0 +1,449 @@
+/*** Mixin Breakpoints ***/
+@mixin breakpoints($point) {
+    @if ($point==desktop) {
+        @media (min-width: 1600px) {
+            @content;
+        }
+    }
+
+    @else if ($point==large) {
+        @media (min-width: 1200px) and (max-width: 1599.98px) {
+            @content;
+        }
+    }
+
+    @else if ($point==medium) {
+        @media (min-width: 992px) and (max-width: 1199.98px) {
+            @content;
+        }
+    }
+
+    @else if ($point==small) {
+        @media (min-width: 576px) and (max-width: 991.98px) {
+            @content;
+        }
+    }
+
+    @else if ($point==mobile) {
+        @media (max-width: 575.98px) {
+            @content;
+        }
+    }
+}
+
+// mixin Breakpoints Minimum Width
+@mixin breakpointsMinWidth($pointMinWidth) {
+    @if ($pointMinWidth==desktop) {
+        @media (min-width: 1600px) {
+            @content;
+        }
+    }
+
+    @else if ($pointMinWidth==large) {
+        @media (min-width: 1200px) {
+            @content;
+        }
+    }
+
+    @else if ($pointMinWidth==medium) {
+        @media (min-width: 992px) {
+            @content;
+        }
+    }
+
+    @else if ($pointMinWidth==small) {
+        @media (min-width: 768px) {
+            @content;
+        }
+    }
+
+    @else if ($pointMinWidth==mobile) {
+        @media (min-width: 576px) {
+            @content;
+        }
+    }
+}
+
+// mixin Breakpoints Maximum Width
+@mixin breakpointsMaxWidth($pointMaxWidth) {
+    @if ($pointMaxWidth==desktop) {
+        @media (max-width: 1599.98px) {
+            @content;
+        }
+    }
+
+    @else if ($pointMaxWidth==large) {
+        @media (max-width: 1199.98px) {
+            @content;
+        }
+    }
+
+    @else if ($pointMaxWidth==medium) {
+        @media (max-width: 991.98px) {
+            @content;
+        }
+    }
+
+    @else if ($pointMaxWidth==small) {
+        @media (max-width: 767.98px) {
+            @content;
+        }
+    }
+
+    @else if ($pointMaxWidth==mobile) {
+        @media (max-width: 575.98px) {
+            @content;
+        }
+    }
+}
+
+
+/*** Use Mixin breakpoints
+   @include breakpoints(desktop) {}
+  
+   @include breakpoints(large) {}
+  
+   @include breakpoints(medium) {}
+  
+   @include breakpoints(small) {}
+  
+   @include breakpoints(mobile) {}
+  ***/
+
+
+/*** Fonts ***/
+.font-regular {
+    font-weight: 400;
+}
+.font-bold {
+    font-weight: 700;
+}
+.font-black {
+    font-weight: 900;
+}
+
+/*** Image Fit ***/
+.img-fit {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
+    &.contain {
+        object-fit: contain;
+    }
+}
+
+/*** Titles ***/
+.page-title {
+    @extend .font-black;
+    color: $black;
+    margin-bottom: 0;
+    @include breakpoints(desktop) {
+        font-size: 38px;
+    }
+
+    @include breakpoints(large) {
+        font-size: 34px;
+    }
+
+    @include breakpoints(medium) {
+        font-size: 32px;
+    }
+
+
+    @include breakpointsMaxWidth(small) {
+        font-size: 28px;
+    }
+}
+
+.title-lg {
+    @extend .font-bold;
+    color: $black;
+    @include breakpoints(desktop) {
+        font-size: 30px;
+    }
+
+    @include breakpoints(large) {
+        font-size: 28px;
+    }
+
+    @include breakpoints(medium) {
+        font-size: 26px;
+    }
+
+
+    @include breakpointsMaxWidth(small) {
+        font-size: 24px;
+    }
+}
+
+.text-body {
+    @include breakpoints(desktop) {
+        font-size: 18px;
+    }
+
+    @include breakpoints(large) {
+        font-size: 16px;
+    }
+
+    @include breakpoints(medium) {
+        font-size: 14px;
+    }
+
+
+    @include breakpointsMaxWidth(small) {
+        font-size: 12px;
+    }
+}
+
+
+/*** Form Control ***/ 
+
+.form-control {
+    border-color: $blueGray;
+    @extend .text-body;
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+.invalid {
+    color: $red;
+    @extend .font-bold;
+    @include breakpointsMinWidth(small) {
+        font-size: 14px;
+    }
+
+
+    @include breakpointsMaxWidth(small) {
+        font-size: 12px;
+    }
+}
+
+
+/*** Colors ***/
+
+.text-blue {
+    color: $blue;
+}
+
+/*** Custom Scroll ***/
+.custom-scroll {
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+    
+    &::-webkit-scrollbar-track {
+        background: $grayExtraLight; 
+        border-radius: 5px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background: $grayLight; 
+        border-radius: 5px;
+    
+    }
+}
+
+/*** Modal ***/
+.modal-formMovie {
+    .modal-header {
+        border-color: rgba($color: $grayLight, $alpha: 0.6);
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
+        padding: 1.5rem 1.5rem;
+        .btn-close {
+            outline: 0;
+            box-shadow: none;
+        }
+    }
+    .modal-body {
+        border-bottom-left-radius: 7px;
+        border-bottom-right-radius: 7px;  
+        padding: 1.5rem 1.5rem;
+
+    }
+    textarea {
+        height: 100px;
+        resize: none;
+        overflow-y: auto;
+        @extend .custom-scroll;
+    }
+}
+
+/*** Select ***/
+.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+    width: 100%;
+}
+.bootstrap-select>.dropdown-toggle.bs-placeholder, .bootstrap-select>.dropdown-toggle.bs-placeholder:active, .bootstrap-select>.dropdown-toggle.bs-placeholder:focus, .bootstrap-select>.dropdown-toggle.bs-placeholder:hover {
+    background-color: transparent;
+    color: $black_26;
+    border-color: $blue;
+    border-radius: 7px;
+}
+
+.bootstrap-select .dropdown-toggle:focus, .bootstrap-select>select.mobile-device:focus+.dropdown-toggle {
+    outline: 0 !important;
+}
+.bootstrap-select>.dropdown-toggle {
+    background-color: $white;
+    border-color: $blue;
+}
+.bootstrap-select {
+    * {
+        @extend .text-body;
+    }
+    .dropdown-menu {
+        color: $black_26;
+        border-color: $blue;
+        .dropdown-item {
+                &:hover {
+                    background-color: $offWhite;
+                }
+                
+                &.active, 
+                &:active,
+                &.selected {
+                    color: $blue;
+                    background-color: transparent;
+                    @extend .font-bold;
+                }
+        
+            }
+    }
+}
+
+
+
+/*** Toggle SideBar  ***/
+.toggle-sidebar {
+    position: fixed;
+    z-index: 99;
+    right: 0.5rem;
+    top: 0.5rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 7px;
+    background-color: $white;
+    margin: 0.5rem;
+    @include breakpointsMinWidth(medium) {
+        display: none;
+     }
+     @include breakpointsMaxWidth(medium) {
+        display: block;
+     } 
+    span{
+        display: block;
+        width: 1.5rem;
+        height: 0.125rem;
+        background-color: $black;
+        transition: $transitionFast;
+        opacity: 1;
+        position: relative;
+        margin: 0 auto;
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 1.5rem;
+            height: 0.125rem;
+            background-color: $black;
+            transition: $transitionFast;
+            opacity: 1;
+        }
+
+        &::before {
+            top: -0.525rem;
+        }
+
+        &::after {
+            top: 0.525rem;
+        }
+    }
+
+    &.open {
+        span {
+            background-color: transparent;
+            &::before,
+            &::after {
+                top: 0px;
+                margin-top: -0.5875rem;
+            }
+            &::before {
+                transform: translateY(0.525rem) rotate(45deg);
+            }
+    
+            &::after {
+                transform: translateY(0.525rem) rotate(-45deg);
+            }
+        }
+    }
+    
+}
+
+
+/*** Loader Data ***/
+.loader-data {
+    position: fixed;
+    z-index: 99;
+    inset: 0;
+    background-color: rgba($color: $black, $alpha: 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .loader {
+        color: $white;
+        font-size: 45px;
+        text-indent: -9999em;
+        overflow: hidden;
+        width: 1em;
+        height: 1em;
+        border-radius: 50%;
+        position: relative;
+        transform: translateZ(0);
+        animation: mltShdSpin 1.7s infinite ease, round 1.7s infinite ease;
+      }
+      
+      @keyframes mltShdSpin {
+        0% {
+          box-shadow: 0 -0.83em 0 -0.4em,
+          0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em,
+          0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+        }
+        5%,
+        95% {
+          box-shadow: 0 -0.83em 0 -0.4em, 
+          0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 
+          0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+        }
+        10%,
+        59% {
+          box-shadow: 0 -0.83em 0 -0.4em, 
+          -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, 
+          -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
+        }
+        20% {
+          box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em,
+           -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, 
+           -0.749em -0.34em 0 -0.477em;
+        }
+        38% {
+          box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em,
+           -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, 
+           -0.82em -0.09em 0 -0.477em;
+        }
+        100% {
+          box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 
+          0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+        }
+      }
+      
+      @keyframes round {
+        0% { transform: rotate(0deg) }
+        100% { transform: rotate(360deg) }
+      }
+
+}
+   
